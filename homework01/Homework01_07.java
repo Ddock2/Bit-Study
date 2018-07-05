@@ -11,7 +11,7 @@ public class Homework01_07 {
 		String str = s.nextLine();
 		char c = str.charAt(0);
 		
-		int a = (int)c+0;
+		int a = (int)c;
 		
 		if((a >= 97) && (a <= 122)) {
 			c = (char)(a-32);
