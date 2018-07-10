@@ -38,7 +38,7 @@ public class IcecreamMain {
 			ice[i].name = s.next();
 			s.nextLine();
 			System.out.print("아이스크림가격 : ");
-			ice[i].price = s.nextInt();
+			ice[i].price = s.nextInt();	// Integer.parseInt(s.nextLine());
 			s.nextLine();
 			System.out.println();
 		}
