@@ -3,18 +3,18 @@ package kr.co.mlec.homework.homework04;
 import java.util.Scanner;
 
 /*
- *	ÀÔ·Â, Á¤¸®	
+ *	ìž…ë ¥, ì •ë¦¬	
  *
- * 	*** 1¹øÂ° ¾ÆÀÌ½ºÅ©¸² Á¤º¸ ÀÔ·Â ***
- * 	¾ÆÀÌ½ºÅ©¸²¸í : (ÀÔ·Â)
- * 	¾ÆÀÌ½ºÅ©¸²°¡°Ý : (ÀÔ·Â)
+ * 	*** 1ë²ˆì§¸ ì•„ì´ìŠ¤í¬ë¦¼ ì •ë³´ ìž…ë ¥ ***
+ * 	ì•„ì´ìŠ¤í¬ë¦¼ëª… : (ìž…ë ¥)
+ * 	ì•„ì´ìŠ¤í¬ë¦¼ê°€ê²© : (ìž…ë ¥)
  * 
  * 	...
  * 
- * 	*** 4¹øÂ°
+ * 	*** 4ë²ˆì§¸
  * 
- * 	<¾ÆÀÌ½ºÅ©¸² ±¸¸Å Á¤º¸>
- * 	¹øÈ£	¾ÆÀÌ½ºÅ©¸²¸í	¾ÆÀÌ½ºÅ©¸²°¡°Ý
+ * 	<ì•„ì´ìŠ¤í¬ë¦¼ êµ¬ë§¤ ì •ë³´>
+ * 	ë²ˆí˜¸	ì•„ì´ìŠ¤í¬ë¦¼ëª…	ì•„ì´ìŠ¤í¬ë¦¼ê°€ê²©
  * 	1	
  * 	2
  * 	3
@@ -27,23 +27,24 @@ public class IcecreamMain {
 		
 		Scanner s = new Scanner(System.in);
 		
-		System.out.print("¾ÆÀÌ½ºÅ©¸² ¸î°³ ±¸ÀÔÇÒ·¡? => ");
+		System.out.print("ì•„ì´ìŠ¤í¬ë¦¼ ëª‡ê°œ êµ¬ìž…í• ëž˜? => ");
 		int n = s.nextInt();
 		
 		Icecream[] ice = new Icecream[n];
 		
 		for(int i=0; i<ice.length; i++) {
 			ice[i] = new Icecream();
-			System.out.print("*** " + (i+1) + "¹øÂ° ¾ÆÀÌ½ºÅ©¸² Á¤º¸ ÀÔ·Â ***\n¾ÆÀÌ½ºÅ©¸²¸í : ");
-			ice[i].name = s.next();
-			System.out.print("¾ÆÀÌ½ºÅ©¸²°¡°Ý : ");
+			System.out.print("*** " + (i+1) + "ë²ˆì§¸ ì•„ì´ìŠ¤í¬ë¦¼ ì •ë³´ ìž…ë ¥ ***\nì•„ì´ìŠ¤í¬ë¦¼ëª… : ");
+			ice[i].name = s.nextLine();
+			System.out.print("ì•„ì´ìŠ¤í¬ë¦¼ê°€ê²© : ");
 			ice[i].price = s.nextInt();
+			s.nextLine();
 			System.out.println();
 		}
 		
-		System.out.println("< ¾ÆÀÌ½ºÅ©¸² ±¸¸Å Á¤º¸ >\n¹øÈ£\t¾ÆÀÌ½ºÅ©¸²¸í\t¾ÆÀÌ½ºÅ©¸²°¡°Ý");
+		System.out.println("< ì•„ì´ìŠ¤í¬ë¦¼ êµ¬ë§¤ ì •ë³´ >\në²ˆí˜¸\tì•„ì´ìŠ¤í¬ë¦¼ëª…\tì•„ì´ìŠ¤í¬ë¦¼ê°€ê²©");
 		for(int i=0; i<ice.length; i++) {
-			System.out.printf("%d\t%s\t\t%d¿ø\n", i+1, ice[i].name, ice[i].price);
+			System.out.printf("%d\t%s\t\t%dì›\n", i+1, ice[i].name, ice[i].price);
 		}
 		
 		
