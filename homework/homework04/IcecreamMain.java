@@ -35,7 +35,8 @@ public class IcecreamMain {
 		for(int i=0; i<ice.length; i++) {
 			ice[i] = new Icecream();
 			System.out.print("*** " + (i+1) + "번째 아이스크림 정보 입력 ***\n아이스크림명 : ");
-			ice[i].name = s.nextLine();
+			ice[i].name = s.next();
+			s.nextLine();
 			System.out.print("아이스크림가격 : ");
 			ice[i].price = s.nextInt();
 			s.nextLine();
