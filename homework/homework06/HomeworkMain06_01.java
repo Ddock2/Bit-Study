@@ -7,24 +7,23 @@ public class HomeworkMain06_01 {
 	public static void main(String[] args) {
 		
 		Scanner s = new Scanner(System.in);
-		ControlString a = new ControlString();
 		String str;
 		char c;
 		
-		System.out.print("¹®ÀÚ¿­ ÀÔ·ÂÇØº¸¾Æ¶ó : ");
+		System.out.print("ë¬¸ìì—´ ì…ë ¥í•´ë³´ì•„ë¼ : ");
 		str = s.nextLine();		
-		System.out.print("¹®ÀÚ¿­¿¡¼­ È®ÀÎÇØº¼ ¹®ÀÚ ÀÔ·ÂÇØº¸¾Æ¶ó : ");
+		System.out.print("ë¬¸ìì—´ì—ì„œ í™•ì¸í•´ë³¼ ë¬¸ì ì…ë ¥í•´ë³´ì•„ë¼ : ");
 		c = s.nextLine().charAt(0);
 		
-		System.out.println("°°Àº±ÛÀÚ " + a.checkChar(str, c) + "°³");
+		System.out.println("ê°™ì€ê¸€ì " + ControlString.checkChar(str, c) + "ê°œ");
 		System.out.println("===============================");
 		
 		
-		System.out.print("¹®ÀÚ¿­ ÀÔ·ÂÇØº¸¾Æ¶ó : ");
+		System.out.print("ë¬¸ìì—´ ì…ë ¥í•´ë³´ì•„ë¼ : ");
 		str = s.nextLine();		
-		System.out.print("¹®ÀÚ¿­¿¡¼­ Áö¿ï ¹®ÀÚ¸¦ ÀÔ·ÂÇØº¸¾Æ¶ó : ");
+		System.out.print("ë¬¸ìì—´ì—ì„œ ì§€ìš¸ ë¬¸ìë¥¼ ì…ë ¥í•´ë³´ì•„ë¼ : ");
 		c = s.nextLine().charAt(0);
-		System.out.println(a.removeChar(str, c));
+		System.out.println(ControlString.removeChar(str, c));
 		System.out.println("===============================");
 		
 		s.close();
