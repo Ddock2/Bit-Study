@@ -1,5 +1,7 @@
 package kr.co.mlec.homework.homework08;
 
+import java.util.Calendar;
+
 public class ShowYM extends Show {
 
 	private int month;
@@ -13,8 +15,8 @@ public class ShowYM extends Show {
 	public void showCalendar() {
 				
 		c.set(year, month-1, 1);		
-		max_day = c.getActualMaximum(c.DAY_OF_MONTH);
-		dayOfWeek = c.get(c.DAY_OF_WEEK);
+		max_day = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+		dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 		
 		System.out.println(year + "³â " + month + "¿ù");
 		System.out.println("--------------------------------------------------------");

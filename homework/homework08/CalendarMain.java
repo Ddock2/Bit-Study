@@ -14,7 +14,7 @@ public class CalendarMain {
 			}else if(sel==2) {
 				s = new ShowYM();
 			}else {
-				System.out.println("í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+				System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.");
 				break;
 			}
 			s.showCalendar();

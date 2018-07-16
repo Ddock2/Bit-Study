@@ -9,8 +9,8 @@ public class ShowY extends Show {
 		
 		for(int i=1; i<=12; i++) {
 			c.set(year, i-1, 1);
-			max_day = c.getActualMaximum(c.DAY_OF_MONTH);
-			dayOfWeek = c.get(c.DAY_OF_WEEK);
+			max_day = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+			dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 			
 			System.out.println(year + "³â " + i + "¿ù");
 			System.out.println("--------------------------------------------------------");
