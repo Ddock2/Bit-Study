@@ -46,7 +46,7 @@ select name, title, salary, start_date
 /* 직원의 연봉에 1000 을 더한 값을 조회하시오. 
    연봉은 급여에 16을 곱하면 됩니다. 단, 연봉은 ALIAS를 지정하여 화면에 출력시 "직원연봉" 으로 출력되도록 합니다. 
 */
-select name, title, salary*16 as 직원연봉
+select name, title, salary+1000, salary*16 as 직원연봉
     from s_emp;
     
 -- 7번
@@ -73,4 +73,5 @@ select name, title, salary
     from s_emp
     where commission_pct is not null
       and manager_id is not null
+      and salary >= 2500
     order by salary asc;
