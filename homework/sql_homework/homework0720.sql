@@ -75,8 +75,7 @@ select e.job_id as 부서번호, e.ms as 최대급여, employees.last_name as �
 */
 select ee.last_name, ee.first_name, ee.salary
   from (
-        select e.*, rownum as rn
+        select e.*, rank() over(order by e.salary desc) r
           from employees e
-         order by salary desc
         )ee
-  where ee.rn between 6 and 10;
+  where ee.r between 6 and 10;
