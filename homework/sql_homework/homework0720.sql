@@ -4,10 +4,10 @@
 */
 select department_id, count(department_id) 사원수
   from employees
- where department_id is not null
- group by department_id
- having count(department_id)>=5
- order by department_id asc;
+  where department_id is not null
+  group by department_id
+  having count(department_id)>=5
+  order by department_id asc;
  
  /* 2.
     Employees 테이블에서 입사한달(hire_date)별로 인원수를 조회
@@ -27,7 +27,7 @@ select department_id, count(department_id) 사원수
 select nvl(to_char(trunc(commission_pct, 1)), '<커미션없음>') as 커미션
        , count(trunc(nvl(commission_pct, 0), 1)) as 직원수
   from employees
- group by trunc(commission_pct, 1);
+  group by trunc(commission_pct, 1);
  
  /* 4
     사원들의 id와 이름(first_name), 전화번호와 지역을 id 오름차순순으로 출력하는 코드를 작성
@@ -43,7 +43,7 @@ select employee_id as id, first_name as 이름, phone_number as 전화번호
               else '기타'
           end as 지역
   from employees
- order by id asc;
+  order by id asc;
 
 /* 5
    사원테이블에서 직원( job_id)별 최대급여(salary)를 받는 사원을 조회하시오
@@ -67,4 +67,4 @@ select ee.last_name, ee.first_name, ee.salary
           from employees e
          order by salary desc
         )ee
- where ee.rn between 6 and 10;
+  where ee.rn between 6 and 10;
