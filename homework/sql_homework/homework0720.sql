@@ -73,9 +73,9 @@ select e.job_id as 부서번호, e.ms as 최대급여, employees.last_name as �
     EMPLOYEES 테이블에서 급여를 많이 받는 순서대로 조회했을 때 결과처럼 6번째부터
     10번째까지 5명의 last_name, first_name, salary를 조회하는 sql문장을 작성
 */
-select ee.last_name, ee.first_name, ee.salary
+select ee.RANKING, ee.last_name, ee.first_name, ee.salary
   from (
-        select e.*, rank() over(order by e.salary desc) r
+        select e.*, rank() over(order by e.salary desc) RANKING
           from employees e
         )ee
-  where ee.r between 6 and 10;
+  where ee.RANKING between 6 and 10;
