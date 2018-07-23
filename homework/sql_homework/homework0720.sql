@@ -68,6 +68,16 @@ select e.job_id as 부서번호, e.ms as 최대급여, employees.last_name as �
        )e
        , employees
   where employees.job_id = e.job_id and employees.salary = e.ms;
+  
+/* 
+select firstname, job_id, max(salary)
+  from employees
+  where (salary, job_id) in(
+                                select max(salary), job_id
+                                  from employees
+                                  group by job_id
+                            );
+*/
 
 /* 6
     EMPLOYEES 테이블에서 급여를 많이 받는 순서대로 조회했을 때 결과처럼 6번째부터
