@@ -44,6 +44,18 @@ select employee_id as id, first_name as 이름, phone_number as 전화번호
           end as 지역
   from employees
   order by id asc;
+  
+  /*
+  select employee_id as id, first_name as 이름, phone_number as 전화번호
+       , case substr(phone_number, 1, 3) when '515' then '서울'
+                                         when '590' then '대전'
+                                         when '650' then '부산'
+                                         when '603' then '광주'
+              else '기타'
+          end as 지역
+  from employees
+  order by id asc;
+  */
 
 /* 5
    사원테이블에서 직원( job_id)별 최대급여(salary)를 받는 사원을 조회하시오
