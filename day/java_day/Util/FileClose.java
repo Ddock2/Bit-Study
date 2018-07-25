@@ -1,4 +1,4 @@
-package kr.co.mlec.Util;
+package kr.co.mlec.util;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
