@@ -1,0 +1,111 @@
+< HTML >
+	
+	https://host(ip):port
+	
+	톰캣 다운
+		tomcat.apache.org => Download => Tomcat 8 => 8.0.53
+		install 할때 port 설정부분 8000포트로 (오라클이 8080포트라 겹침)
+
+		127.0.0.1:8000 => 고양이나옴 
+		(localhost)	
+
+	Eclipse 인코딩방식 변경 encoding(ECU-KR) ==> UTF-8
+		Window => Preferences => Web => CSS, HTML, JSP => Encoding => UTF-8
+				     => General => Workspace => Text file encoding => Other => UTF-8
+					(이전에 했던 한글 깨짐, 이전꺼 볼때 ECU-KR로 설정하면 보임)
+	
+	web-workspace 만들기
+	
+	Dynamic Web project - next  해서 generate.web.xml 누르고 만들기
+	밑에 Servers 눌러서 Apache - Tomcat v8.0 Server - 설치경로 Tomcat 8.0
+	
+	Lecture 폴더에 eclipse-work 폴더 생성
+	
+	Servers => Tomcat v8.0 ... => 안쓰는 port로 설정(8000) => Server Locations => use custom location => eclipse-work 폴더로 => 저장 => Servers 실행
+	
+		127.0.0.1:8000 => HTTP Status 404 - Not Found
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+	* 태그
+		- <>
+		- 시작태그와 종료태그로 구성
+		- <태그명>.....</태그명>	: 시작....종료
+		- <태그명 /> 		: 시작이면서 종료 	// <태그명 > 으로도 씀
+	* 속성
+		- 각각의 시작태그는 필요에 따라 속성을 가질 수 있음
+		- 속성을 갖지 않는 태그도 있지만 경우에 따라 여러개의 속성을 가질 수 있음
+		- 속성은 시작태그만 가짐
+		- <태그명 속성 = "..."> ... </태그>
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+*** developer.mozilla.org	: 기술목록에서 공식문서 표준 확인
+
+*** www.w3schools.com	: html 연습
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+	* html 기본 태그
+		
+		- html
+		
+		- head
+		
+		- title
+		
+		- body
+
+			<html>
+				<head>
+					<title>	</title>
+				</head>
+				<body>
+				
+				</body>
+			</html>
+
+	- 이클립스 자바 관련 외 웹 WebContent에 만듬
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+★	<a href=""></a>				: 하이퍼링크		새탭: target="_blank"
+	<div style="background-color:blue"></div>	: 한줄 영역 , 배경색 속성
+	<span></span>				: 단어 영역
+	<br>					: enter
+	&nbsp;					: space bar
+	<hr width="?% or ?px" color="?" size="?px">	: 줄 생성, 줄길이, 줄색, 줄두께
+	<h1 align="center"></h1>			: 두껍고 큰 글자 1~6, 가운데정렬
+	<pre></pre>				: 저 안에서 엔터 스페이스바 특수문자 있는 그대로 나옴
+	<strong></strong>  <b></b>			: 두꺼운글자
+	<q></q>					: ""
+	<blockquote></blockquote>			: 인용문
+★	<img src="" width="600px" height="400px"	: 사진넣기, 넓이, 높이, 테두리, 테두리색
+	border ="2" style="border-color:green"		
+	alt="사진안나올때 글뜸"
+	title="마우스 올리면사진설명">	
+	<figure>					: 사진에 캡션
+		<img src="">
+		<figcaption>
+	</figure>	: 사진에 캡션
+	<select>					: 선택	<select multiple> 은 여러개
+		<optgroup label ="">
+			<option>a</option>
+			<option selected>b</option>
+			<option>c</option>
+		</optgroup>
+		<optgroup label ="">
+			<option>d</option>
+			<option>e</option>
+			<option>f</option>
+		</optgroup>
+	</select>
+	
+★	exam11.html : 간단한 화면구성
+	
+		header	: 사이트명, 로고 포함
+		nav		: 사이트의 메뉴 포함
+		section	: 사이트 본문(문서 내용)
+		article	: 문서의 내용이 많은 경우 세부적으로 구분 
+		aside	: 문서의 주내용을 제외한 부분으로 주내용의 주변에 배치되는 내용
+		footer	: 사이트의 주소, 저작권, 사이트정보 등의 부가정보
