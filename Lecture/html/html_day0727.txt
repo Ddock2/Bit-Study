@@ -1,0 +1,49 @@
+< HTML >
+	<embed src="">			: 음악, 영상데이터 지원		// HTML5 전 버전
+	<audio src="" controls="controls"	: 음악데이터 지원			// HTML5 버전
+		      autoplay="autoplay"	  (속성: 제어화면, 자동재생, 반복재생)
+		      loop="loop"></audio>
+	<video src="" controls="controls"	: 영상데이터 지원			// HTML5 버전
+		     autoplay="autoplay"	  (속성: 제어화면, 자동재생, 넓이, 높이)
+		     width="640"
+		     height="480"></video>
+	<iframe src=""></iframe>		: YOUTUBE 영상 소스복사하면 다 나옴
+
+	*** 표
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+		자세한건 table폴더에 있는 파일 참고
+
+--------------------------------------------------------------------------------------------------------------------------------------
+	*** 입력 
+
+	- form
+		<form> </form> 사용자가 입력하는 부분 감싸줌
+		<form action="">	: 입력내용 전송, 이동
+
+	<input>	: 입력			// (속성)
+					// type="" :"text"		: 글자입력(한줄)
+						"password"	: 비밀번호입력
+						"submit"		: 제출버튼
+						"radio"		: 선택
+						"checkbox		: 중복선택
+						"file"		: 파일첨부
+						"email"		: 입력시 ~@~ 입력 필수
+						"url"		:  url입력
+						"tel"		: 전화번호
+						"search"		: x표 오른쪽에 뜨는 창
+					// name=""	: 구분해줌
+					// size=""		: 보이는 글자수
+					// required	: 필수 입력사항
+					// pattern=""	: ""내용과 비교
+					// placeholder=""	: 입력양식 보여주기
+	<textarea rows="" cols="">	: 글자 여러줄 입력
