@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구글폰트(fonts.google.com) 에서 글자체 가져올수 있</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
+	body{
+		font-family: 'Nanum Myeongjo','Kirang Haerang', 궁서, 돋움;	/* 앞에 없으면 뒤에 */
+		/*font-size: x-large;*/
+		font-size: 20pt;
+	}
+	
+	#div01{
+		/*font-size: medium;*/
+		/*font-size: 12pt;*/
+		font-size: 1.5em;			/* medium 기준으로 1.5배*/
+	}
+	
+	#div02{
+		/*font-size: xx-small;*/
+		/*font-size: 8pt;*/
+		font-size: 1em;
+		font-style: italic;
+		font-weight: 900;
+		font-variant: small-caps;	/* 소문자 => 작은 대문자 */
+	}
+</style>
+</head>
+<body>
+	나는 본문<br>
+	<div id="div01">띠용???</div>
+	<div id="div02">띠용???AaBb</div>
+</body>
+</html>

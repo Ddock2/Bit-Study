@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		width: 300px;
+		border-width: 10px;
+		border-color: pink;
+		padding: 10px;			/* 선과 글사이 간격 	*/
+		text-align: center;
+		margin: 10px;			/* 상하좌우 여백 	*/
+		/*margin: 10px 0px 10px 0px;	/* 위에서 시계방향	*/
+		float: left;					/* 왼쪽 정렬, 블로태그를 인라인처럼 */
+		/* display : inline;*/
+	}
+	
+	.test01{
+		border-style: solid;
+	}
+	
+	.test02{
+		border-style: dotted;
+	}
+	
+	.test03{
+		border-style: dashed;
+	}
+	
+	.test04{
+		border-style: double;
+	}
+	
+	.test05{
+		border-style: ridge;
+		clear: both;				/*float 취소*/
+	}
+		
+	.test06{
+		border-style: groove;
+	}
+		
+	.test07{
+		border-style: outset;
+	}
+		
+	.test08{
+		border-style: inset;
+	}
+</style>
+</head>
+<body>
+	<div class="test01">실선상자</div>
+	<div class="test02">점상자</div>
+	<div class="test03">점선상자</div>
+	<div class="test04">이중선상자</div>
+	<div class="test05">볼록상자</div>
+	<div class="test06">오목상자</div>
+	<div class="test07">볼록상자 볼록내용</div>
+	<div class="test08">오목상자 오목내용</div>
+</body>
+</html>

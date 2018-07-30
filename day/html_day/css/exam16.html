@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	li{
+		list-style: none;
+		float: left;
+		margin: 20px;
+		font-size: 20pt;
+	}
+	
+	li:first-child {
+		color: skyblue;
+	}
+	
+	li:last-child {
+		background-color: skyblue;
+	}
+	
+	li:nth-child(2) {
+		color: fuchsia;
+	}
+	
+	li:nth-child(2n+1) {
+		background-color: lime;
+	}
+	
+	p{
+		clear: both;
+	}
+	
+	:link{				/* 하이퍼링크 */
+		color: activecaption;
+	}
+	
+	:visited{			/* 눌러본거 */
+		color: green;
+	}
+	
+	a:active{			/* 마우스로 끌때 */
+		color: purple;
+	}
+	
+	a:hover{			/* 마우스 올릴때 */
+		color: aqua;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<ul id="number">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ul>
+	<p>
+		<a href="http://naver.com">네이버</a>
+		<a href="http://daum.net">다음</a>
+		<a href="#number">숫자로</a>
+	</p>
+</body>
+</html>

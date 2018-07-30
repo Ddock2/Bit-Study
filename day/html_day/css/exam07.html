@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 가로세로 너비가 300px인 빨간색 실선을 가지는 사각형 */
+	#test01{
+		width: 300px;
+		height: 300px;
+		border-style: solid;
+		border-color: red;
+		border-width: 1px;
+		text-align: center;
+		padding: 10px;
+	}
+	
+	#test02{
+		width: 200px;
+		height: 200px;
+		border: 1px solid red;
+		text-align: center;
+		padding: 10px;
+		border-radius: 50px;		/* 모서리 둥글게 */
+	}
+	
+	#test03{
+		width: 200px;
+		height: 200px;
+		border: 1px solid red;
+		text-align: center;
+		padding: 10px;
+		border-radius: 50%;
+	}
+	
+	#test04{
+		width: 200px;
+		border: 1px solid red;
+		text-align: center;
+		padding: 10px;
+		margin: 10px;
+		border-top-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-bottom-color: blue;
+		
+		box-shadow: 10px 10px 10px gray;	/* 그림자 (가로, 세로, 흐림도, 색)*/
+		/*box-shadow: inset 10px 10px 10px gray;	/* 안쪽에*/*/
+	}
+</style>
+</head>
+<body>
+	<div id="test01">사각형</div>
+	<div id="test02">둥근사각형</div>
+	<div id="test03">원</div>
+	<div id="test04">사각형2</div>
+</body>
+</html>
