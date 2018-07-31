@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var array = [12, 'A', 34.56, true, "ABC", null, '!', new Date()];	// 배열인자에 여러종류 가능
+	
+	document.write(array[0] + '<br>');
+	document.write(array[1] + '<br>');
+	document.write(array[2] + '<br>');
+	document.write(array[3] + '<br>');
+	document.write(array[4] + '<br>');
+	document.write(array[5] + '<br>');
+	document.write(array[6] + '<br>');
+	document.write(array[7] + '<br>');
+	document.write(array[8] + '<br>');		// error안나고 undefined로 나옴
+
+	document.write('array : ' + array + '<br>');
+	document.write('array 개수 : ' + array.length +'<br>');
+	array[8] = 'add';
+	document.write('add 추가후 array : ' + array + '<br>');
+	array[11] = 'end';
+	document.write('end 추가후 array : ' + array + '<br>');
+	document.write('array 개수 : ' + array.length +'<br>');
+	
+	array[array.length] = "찐end";
+	array.push("찐찐end");
+	document.write('array : ' + array + '<br>');
+	document.write(array.pop()+'<br>');
+	document.write('array : ' + array + '<br>');
+	
+	document.write(typeof array + '<br>');
+	
+	var str ="Hello World";
+	document.write('str : ' + str + '<br>');
+	document.write(str.length);
+</script>
+</head>
+<body>
+
+</body>
+</html>

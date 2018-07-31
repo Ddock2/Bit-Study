@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var a = 10;
+	let b = 20;		// ecmascript6에서 추가된 자료형
+					// 지역변수화					var가 원래 다 전역변수
+	const c = 30;	// ecmascript6에서 추가된 자료형
+					// 상수화, 수정불가
+	
+	alert(`a : ${a}, b : ${b}, c : ${c}`);
+	
+	a = 100;
+	b = 200;
+	// c = 300;		// 오류
+	
+	alert(`a : ${a}, b : ${b}, c : ${c}`);
+	
+	{
+		var temp = 123;
+		let letTemp = 456;
+		alert('temp : ' + temp);
+		alert('letTemp : ' + letTemp);
+	}
+	alert('temp : ' + temp);
+	//alert('letTemp : ' + letTemp);	// 오류
+</script>
+</head>
+<body>
+
+</body>
+</html>

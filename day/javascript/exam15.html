@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// funcA();
+	
+	function funcA(){
+		alert('funcA()...');
+	}
+	
+	// funcB();		// 익명함수는 정의되기 전에 사용하면 오류
+	
+	var funcB = function(){
+		alert('funcB()...');
+	}
+	
+	// funcB();
+	
+	// funcC();
+	
+	function funcC(){
+		alert('선언적 함수 funcC() 호출...');
+	}
+	
+	// funcC();
+	
+	var funcC = function(){				// 익명함수가 생긴 뒤로 같은 이름의 선언적 함수가 무시됨
+		alert('익명함수 funcC() 호출...');	// 선언함수들은 시행될때 한번 읽히고 시작
+	}
+	
+	// funcC();
+</script>
+</head>
+<body>
+
+</body>
+</html>

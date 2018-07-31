@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var num = prompt("정수 입력 빨리");		/* 입력 */
+	num = Number(num);					/* string -> number */
+	
+	var msg = num + ' : ' + (num%2==0?'짝':'홀');
+	alert(msg);
+	
+	if(num%2===0){
+		document.write(num +"= 짝수");
+	}else{
+		document.write(num +"= 홀수")
+	}
+</script>
+</head>
+<body>
+	
+</body>
+</html>

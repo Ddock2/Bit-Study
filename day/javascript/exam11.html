@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+		이름을 입력 : 홍길
+		나이를 입력 : 11
+		홍길의 10년후의 나이는 21세입니다
+		1번째 수행입니다
+		계속? <=확인버튼 클릭
+				
+		이름을 입력 : 동
+		나이를 입력 : 1
+		동의 10년후의 나이는 11세입니다
+		2번째 수행입니다
+		계속? <=확인버튼 클릭
+	*/
+	var i=1, react=true;
+	while(react){
+		var name = prompt("이름을 입력 : ");
+		var age = Number(prompt("나이를 입력 : "));
+		alert(`${name}의 10년후 나이는 ${age+10}세 입니다`);
+		alert(`${i}번째 수행입니다`);
+		react = confirm("계속?");
+		i++;
+	}
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
