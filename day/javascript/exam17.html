@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function func(num1, num2, num3){
+		alert(`num1 : ${num1}, num2 : ${num2}, num3 : ${num3}`);
+	}
+	
+	// 매개변수가 3개 호출되지 않으면 각 변수가 undefined으로 설정되지 않고 0으로 초기화되게
+	// 방법 1
+	function func(num1, num2, num3){
+		if(!num1) num1 = 0;
+		if(!num2) num2 = 0;
+		if(!num3) num3 = 0;
+		
+		alert(`num1 : ${num1}, num2 : ${num2}, num3 : ${num3}`);
+	}
+	
+	// 방법2
+	function func(num1, num2, num3){
+		num1 = num1 || 0;
+		num2 = num2 || 0;
+		num3 = num3 || 0;
+		
+		alert(`num1 : ${num1}, num2 : ${num2}, num3 : ${num3}`);
+	}
+	
+	// 방법3 : EcmaScript6
+	// 초기화 시킨 오른쪽은 전부 모양 따라가야됨
+	// 없으면 0으로 초기화됨 ㅇ
+	function func(num1 = 0, num2 = 0, num3 = 0){
+		alert(`num1 : ${num1}, num2 : ${num2}, num3 : ${num3}`);
+	}
+	
+	func();
+	func(100, 200);		// num1 : 100, num2 : 200, num3 : undefined
+	func(10,20,30);
+</script>
+</head>
+<body>
+
+</body>
+</html>

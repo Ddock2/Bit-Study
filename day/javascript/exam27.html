@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// prototype
+	function Person(name, phone, addr){
+		this.name = name;
+		this.phone = phone;
+		this.addr = addr;
+	}
+	
+	Person.prototype.info = function(){
+		var msg = '';
+		for(var key in this){
+			if(typeof this[key] != 'function'){
+				msg += key + ' : ' + this[key] + '\n';
+			}
+		}
+		alert(msg);
+	}
+	
+	var person = new Person('홍길동', '010-1010-1010', '서울시 서초구');
+	var person2 = new Person('홍길', '010-1100-1010', '서울시 서초구');
+	var person3 = new Person('홍동', '010-1010-1110', '서울시 서초구');
+	
+	console.log(person);
+	person.info();
+	person2.info();
+	person3.info();
+</script>
+</head>
+<body>
+
+</body>
+</html>

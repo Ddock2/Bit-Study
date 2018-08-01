@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+		자바스크립트 내장함수
+		1. 타이머
+			setTimeout( function, ms )		// 시간 지나고 실행
+			setInterval( function, ms )		// 시간마다 실행
+		2. 코드실행함수
+			eval(string)
+		3. 숫자 변환함수
+			parsInt(string)
+			parsFloat(string)
+	*/
+	
+	var func = function(){alert('1초끝')};
+	
+//	setTimeout("alert('1초지남')",1000);
+/*	setTimeout(function(){
+		alert('1초지남');
+	}, 1000);
+	
+	setTimeout(func, 1000); */
+	
+	setTimeout(function(){
+		clearInterval(id)				// setInterval 끝
+	}, 5000);
+	
+	 var id = setInterval(function(){
+		document.write('현재시간 : ' + new Date() + '<br>')
+	}, 1000);
+</script>
+</head>
+<body>
+
+</body>
+</html>

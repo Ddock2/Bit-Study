@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function makePerson(name, phone, addr){
+		var person = {
+			'name' : name,
+			'phone' : phone,
+			'addr' : addr,
+			info : function(){
+				var msg = '';
+				for(var key in this){
+					if(typeof this[key] != 'function'){
+						msg += key + ' : ' + this[key] + '\n';
+					}
+				}
+				alert(msg);
+			}
+		};
+		
+		return person;
+	}
+	
+	var persons = [
+			makePerson('홍','123', '서울시'),
+			makePerson('가','456', '경기도')
+	];
+	
+	for(var i in persons){
+		persons[i].info();
+	}
+	
+	console.log(persons);	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

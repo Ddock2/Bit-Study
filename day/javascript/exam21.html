@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function aaa(){
+		alert('aaa');
+	}
+	
+	var aaa = function(){
+		alert('aaa');
+	}
+	
+	// Labbda Expression Code
+	var bbb = () => {
+		alert('bbb');
+	}
+	
+	var add = (a,b) => {
+		alert(`a+b = ${a+b}`);
+	}
+	
+	/* var sum = (a,b) =>{
+		return a+b;
+	} */
+	
+	var sum = (a,b) =>a+b;
+	
+	alert(sum(10,20));
+	
+	bbb();
+	aaa();
+</script>
+</head>
+<body>
+
+</body>
+</html>

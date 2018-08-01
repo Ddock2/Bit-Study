@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var person = {
+			'name' : '홍길동',
+			'phone': '010-1111-2222'
+	};
+	
+	alert(typeof person);
+	console.log(person);
+	alert(`name : ${person.name}`);
+	alert(`phone : ${person.phone}`);
+	
+	alert(`name : ${person['name']}`);
+	alert(`멤버변수 name 존재여부 : ${'name' in person}`);
+	alert(`멤버변수 phone 존재여부 : ${'phone' in person}`);
+	alert(`멤버변수 addr 존재여부 : ${'addr' in person}`);
+	console.log(person);
+	
+	// 동적으로 객체의 멤버변수 추가
+	person.addr = '서울시 서초구';
+	alert(`멤버변수 addr 존재여부 : ${'addr' in person}`);
+	alert(`addr : ${person['addr']}`);
+	console.log(person);
+
+	// 동적으로 객체의 멤버변수 삭제
+	delete(person.addr);
+	alert(`멤버변수 addr 존재여부 : ${'addr' in person}`);
+	alert(`addr : ${person['addr']}`);
+	console.log(person);
+</script>
+</head>
+<body>
+
+</body>
+</html>
