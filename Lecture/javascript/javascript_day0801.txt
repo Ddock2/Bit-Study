@@ -1,0 +1,22 @@
+* 자바스크립트 내장함수
+	
+	1. 타이머
+		setTimeout( function, ms )		// 시간 지나고 실행
+		setInterval( function, ms )		// 시간마다 실행
+	2. 코드실행함수
+		eval(string)			// javascript문법으로 된 string 실행
+	3. 숫자 변환함수				// string에 있는 숫자만 뽑아냄
+		parsInt(string)			
+		parsFloat(string)
+
+* 자바스크립트 람다식 	: 익명함수 쉽게 쓰려고 씀
+	var aaa = () => {}
+
+* 프로토타입
+	객체들이 하나의 객체를 공유
+		ob.prototype.func = function(){}		// ob객체가 func를 공유
+							// 변수도 가능
+
+* JSON
+	JSON.parse()	: 문자열을 자바스크립트 객체로 변환
+	JSON.stringify()	: 자바스크립트 객체를 문자열로 변환
