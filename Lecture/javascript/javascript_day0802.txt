@@ -1,0 +1,47 @@
+* 브라우저 객체 모델(BOM)
+	
+	window객체 : 자바스크립트 브라우저 기반 최상위 객체
+			- location 객체	: 주소(URL)와 관련된 객체
+			- history 객체	: 기록과 관련된 객체
+			- navigator 객체	: 웹브라우저와 관련된 객체
+			- screen 객체	: 화면과 관련된 객체
+			- document 객체	: HTML문서와 관련된 객체
+
+
+
+	function autoCall() {			// body 실행 후 실행
+		alert('!!!');
+	}
+	</script>
+	</head>
+	
+	<body onload="autoCall()">
+---------------------------------------------------------------------------------------------------------------------------------	
+	window.onload = function() {		// html전부 다 읽고 자동실행
+		alert('load...');
+	}
+
+---------------------------------------------------------------------------------------------------------------------------------	
+* DOM(Document Object Model)
+	
+	- document.body.innerHTML	: body 내용에 입력된 내용을 태그로 처리하여 출력
+	
+	- document.body.innerText	: body 내용에 입력된 내용을 문자열로 만들어서 출력
+	
+---------------------------------------------------------------------------------------------------------------------------------	
+	- document.getElementById('ID').innerHTML	: id가 'ID'인 태그 안의 내용
+	
+	- document.getElementsByTagName(태그명)	: 태그명으로 찾기, 배열리턴
+	- document.querySelector(태그명)		: 맨처음 검색된 태그명의 요소 반환
+	- document.querySelectorAll(태그명)		: 태그명에 해당하는 모든 요소 반환, 배열리턴
+	
+---------------------------------------------------------------------------------------------------------------------------------	
+	- document.createElement(태그명)	: 태그 생성
+	- document.createTextNode(string)	: 문자열 생성
+	
+	- .appendChild()			:
+
+		var h1Tag = document.createElement('h1'); 	// <h1></h1>
+		var text = document.createTextNode('Hello');	// Hello
+		h1Tag.appendChild(text);			// <h1>Hello</h1>
+		document.body.appendChild(h1Tag);		// <body><h1>Hello</h1></body>
