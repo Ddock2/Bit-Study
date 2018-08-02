@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		var h1Tag = document.createElement('h1');
+		console.log(h1Tag);
+		
+		var text = document.createTextNode('Hello');
+		console.log(text);
+		
+		h1Tag.appendChild(text);
+		console.log(h1Tag);
+		
+		document.body.appendChild(h1Tag);
+		
+		var imgTag = document.createElement('img');
+		//imgTag.setAttribute('src',"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1gtPVd5aDpkTwBd7bPPwYqieoelHqGDWfnCjHgg1oMT4La88lzQ");
+		imgTag.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1gtPVd5aDpkTwBd7bPPwYqieoelHqGDWfnCjHgg1oMT4La88lzQ";
+		console.log(imgTag);
+		var aTag = document.createElement('a');
+		aTag.href = "https://github.com/";
+		aTag.target = '_blank';
+		aTag.appendChild(imgTag);
+		
+		document.body.appendChild(aTag);
+		
+	}
+</script>
+</head>
+<body>
+	<!-- <h1>Hello</h1> 
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1gtPVd5aDpkTwBd7bPPwYqieoelHqGDWfnCjHgg1oMT4La88lzQ"> -->
+	으
+</body>
+</html>

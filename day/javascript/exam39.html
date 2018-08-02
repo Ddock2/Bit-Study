@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	console.log(document);		// document
+	console.log(document.body);	// null
+	
+	window.onload = function(){		// html전부 다 읽고 자동 실행
+		console.log(document.body);	// body
+		alert('innerHTML : ' + document.body.innerHTML); // body안 html문서
+		alert('innerText : ' + document.body.innerText); // 태그빼고
+		
+		//document.body.innerHTML = "변경했당!";
+		
+		var list ='';
+		list += '<ul>';
+		list += '<li>aaa</li>';
+		list += '<li>bbb</li>';
+		list += '<li>ccc</li>';
+		list += '</ul>';
+		
+		/* 
+		document.body.innerHTML = list;		// 태그처리됨
+		document.body.innerText = list;		// 문자열로만 처리됨
+		 */
+		 document.body.innerHTML += list;
+	}
+</script>
+</head>
+<body>
+	hello<br>
+	<h2>안녕안녕</h2>
+</body>
+</html>

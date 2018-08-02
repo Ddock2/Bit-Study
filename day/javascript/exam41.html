@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		var tags = document.getElementsByTagName("td");	// 태그명으로 찾기, 배열리턴
+		console.log(tags);
+		console.log(tags[0]);
+		console.log(tags[1]);
+		tags[0].innerHTML = '아이디';
+		
+		/*
+			document.querySelector(태그명)	: 맨처음 검색된 태그명의 요소 반환
+			document.querySelectorAll(태그명)	: 태그명에 해당하는 모든 요소 반환, 배열형
+			
+		*/
+		var nodes = document.querySelectorAll('td');
+		nodes[1].innerHTML = '패스워드';
+	}
+</script>
+</head>
+<body>
+	<table style="width:100px; height:100px;" " border=1">
+		<tr>
+			<td>ID</td>
+		</tr>
+		<tr>
+			<td>PASSWORD</td>
+		</tr>
+	</table>
+</body>
+</html>
