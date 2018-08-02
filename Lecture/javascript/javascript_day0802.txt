@@ -1,15 +1,15 @@
-* ºê¶ó¿ìÀú °´Ã¼ ¸ğµ¨(BOM)
+* ë¸Œë¼ìš°ì € ê°ì²´ ëª¨ë¸(BOM)
 	
-	window°´Ã¼ : ÀÚ¹Ù½ºÅ©¸³Æ® ºê¶ó¿ìÀú ±â¹İ ÃÖ»óÀ§ °´Ã¼
-			- location °´Ã¼	: ÁÖ¼Ò(URL)¿Í °ü·ÃµÈ °´Ã¼
-			- history °´Ã¼	: ±â·Ï°ú °ü·ÃµÈ °´Ã¼
-			- navigator °´Ã¼	: À¥ºê¶ó¿ìÀú¿Í °ü·ÃµÈ °´Ã¼
-			- screen °´Ã¼	: È­¸é°ú °ü·ÃµÈ °´Ã¼
-			- document °´Ã¼	: HTML¹®¼­¿Í °ü·ÃµÈ °´Ã¼
+	windowê°ì²´ : ìë°”ìŠ¤í¬ë¦½íŠ¸ ë¸Œë¼ìš°ì € ê¸°ë°˜ ìµœìƒìœ„ ê°ì²´
+			- location ê°ì²´	: ì£¼ì†Œ(URL)ì™€ ê´€ë ¨ëœ ê°ì²´
+			- history ê°ì²´	: ê¸°ë¡ê³¼ ê´€ë ¨ëœ ê°ì²´
+			- navigator ê°ì²´	: ì›¹ë¸Œë¼ìš°ì €ì™€ ê´€ë ¨ëœ ê°ì²´
+			- screen ê°ì²´	: í™”ë©´ê³¼ ê´€ë ¨ëœ ê°ì²´
+			- document ê°ì²´	: HTMLë¬¸ì„œì™€ ê´€ë ¨ëœ ê°ì²´
 
 
 
-	function autoCall() {			// body ½ÇÇà ÈÄ ½ÇÇà
+	function autoCall() {			// body ì‹¤í–‰ í›„ ì‹¤í–‰
 		alert('!!!');
 	}
 	</script>
@@ -17,31 +17,34 @@
 	
 	<body onload="autoCall()">
 ---------------------------------------------------------------------------------------------------------------------------------	
-	window.onload = function() {		// htmlÀüºÎ ´Ù ÀĞ°í ÀÚµ¿½ÇÇà
+	window.onload = function() {		// htmlì „ë¶€ ë‹¤ ì½ê³  ìë™ì‹¤í–‰
 		alert('load...');
 	}
 
 ---------------------------------------------------------------------------------------------------------------------------------	
 * DOM(Document Object Model)
 	
-	- document.body.innerHTML	: body ³»¿ë¿¡ ÀÔ·ÂµÈ ³»¿ëÀ» ÅÂ±×·Î Ã³¸®ÇÏ¿© Ãâ·Â
+	- document.body.innerHTML	: body ë‚´ìš©ì— ì…ë ¥ëœ ë‚´ìš©ì„ íƒœê·¸ë¡œ ì²˜ë¦¬í•˜ì—¬ ì¶œë ¥
 	
-	- document.body.innerText	: body ³»¿ë¿¡ ÀÔ·ÂµÈ ³»¿ëÀ» ¹®ÀÚ¿­·Î ¸¸µé¾î¼­ Ãâ·Â
-	
----------------------------------------------------------------------------------------------------------------------------------	
-	- document.getElementById('ID').innerHTML	: id°¡ 'ID'ÀÎ ÅÂ±× ¾ÈÀÇ ³»¿ë
-	
-	- document.getElementsByTagName(ÅÂ±×¸í)	: ÅÂ±×¸íÀ¸·Î Ã£±â, ¹è¿­¸®ÅÏ
-	- document.querySelector(ÅÂ±×¸í)		: ¸ÇÃ³À½ °Ë»öµÈ ÅÂ±×¸íÀÇ ¿ä¼Ò ¹İÈ¯
-	- document.querySelectorAll(ÅÂ±×¸í)		: ÅÂ±×¸í¿¡ ÇØ´çÇÏ´Â ¸ğµç ¿ä¼Ò ¹İÈ¯, ¹è¿­¸®ÅÏ
+	- document.body.innerText	: body ë‚´ìš©ì— ì…ë ¥ëœ ë‚´ìš©ì„ ë¬¸ìì—´ë¡œ ë§Œë“¤ì–´ì„œ ì¶œë ¥
 	
 ---------------------------------------------------------------------------------------------------------------------------------	
-	- document.createElement(ÅÂ±×¸í)	: ÅÂ±× »ı¼º
-	- document.createTextNode(string)	: ¹®ÀÚ¿­ »ı¼º
+	- document.getElementById('ID').innerHTML	: idê°€ 'ID'ì¸ íƒœê·¸ ì•ˆì˜ ë‚´ìš©
 	
-	- .appendChild()			:
+	- document.getElementsByTagName(íƒœê·¸ëª…)	: íƒœê·¸ëª…ìœ¼ë¡œ ì°¾ê¸°, ë°°ì—´ë¦¬í„´
+	- document.querySelector(íƒœê·¸ëª…)		: ë§¨ì²˜ìŒ ê²€ìƒ‰ëœ íƒœê·¸ëª…ì˜ ìš”ì†Œ ë°˜í™˜
+	- document.querySelectorAll(íƒœê·¸ëª…)		: íƒœê·¸ëª…ì— í•´ë‹¹í•˜ëŠ” ëª¨ë“  ìš”ì†Œ ë°˜í™˜, ë°°ì—´ë¦¬í„´
+	
+---------------------------------------------------------------------------------------------------------------------------------	
+	- document.createElement(íƒœê·¸ëª…)	: íƒœê·¸ ìƒì„±
+	- document.createTextNode(string)	: ë¬¸ìì—´ ìƒì„±
+	
+	- .appendChild()			: ìì‹íƒœê·¸ ì„¤ì •
 
 		var h1Tag = document.createElement('h1'); 	// <h1></h1>
 		var text = document.createTextNode('Hello');	// Hello
 		h1Tag.appendChild(text);			// <h1>Hello</h1>
 		document.body.appendChild(h1Tag);		// <body><h1>Hello</h1></body>
+	
+	- .removeChild()			: ìì‹íƒœê·¸ ì‚­ì œ
+	- ì•„ì´ë””.parentNode.removeChild(ì•„ì´ë””) : ë¶€ëª¨ ì•Œì•„ë‚´ì„œ ìì‹íƒœê·¸ ì‚­ì œ
