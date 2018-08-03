@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		
+		var bt01 = document.getElementById("bt01");
+		// Level2방식 이벤트 모델
+		bt01.addEventListener('click', function(){
+			console.log('click...');
+		});
+		bt01.addEventListener('click', function(){
+			console.log('click');
+		});
+	}
+</script>
+</head>
+<body>
+	<button id="bt01">Click</button>
+</body>
+</html>

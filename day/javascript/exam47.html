@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function selectAll(){
+		var hobbys = document.inputForm.hobby;
+		for(var i=0; i<hobbys.length; i++){
+			hobbys[i].checked = a;
+		}
+	}
+	
+	function deselectAll(){
+		var hobbys = document.inputForm.hobby;
+		for(var i=0; i<hobbys.length; i++){
+			hobbys[i].checked = false;
+		}
+	}
+	
+	function toggle(check){
+		var hobbys = document.inputForm.hobby;
+		for(var i=0; i<hobbys.length; i++){
+			hobbys[i].checked = check;
+		}
+	}
+
+	function toggle2(){
+		var hobbys = document.inputForm.hobby;
+		/* 
+		for(var i=0; i<hobbys.length; i++){
+			hobbys[i].checked = !hobbys[i].checked;
+		}
+		 */
+		var check = false;
+		for(var i=0; i<hobbys.length; i++){
+			if(!hobbys[i].checked){check = true; break;}
+		}
+		for(var i=0; i<hobbys.length; i++){
+			hobbys[i].checked = check;
+		}
+	}
+	
+	function showInfo(){
+		var hobbys = document.inputForm.hobby;
+		var msg = "";
+		for(var i=0; i<hobbys.length; i++){
+			if(hobbys[i].checked){
+				msg += hobbys[i].value + '\n';
+			}
+		}
+		alert(msg);
+	}
+</script>
+</head>
+<body>
+	<form name="inputForm">
+		당신의 취미는? <br>
+		 <input type="checkbox" name="hobby" value="music">음악감상<br>
+		 <input type="checkbox" name="hobby" value="movie">영화감상<br>
+		 <input type="checkbox" name="hobby" value="reading">독서<br>
+		 <input type="checkbox" name="hobby" value="game">게임<br>
+<!--	 <input type="button" value="전체선택" onclick="selectAll()">
+		 <input type="button" value="선택해제" onclick="deselectAll()"><br>	-->
+		 <input type="button" value="전체선택" onclick="toggle(true)">
+		 <input type="button" value="선택해제" onclick="toggle(false)"><br>
+		 <input type="button" value="전체선택/해제" onclick="toggle2()"><br>
+		 <input type="button" value="결과보기" onclick="showInfo()"><br>
+		 <input type="submit">
+	</form>
+	<!-- exam49.html?hobby=movie -->
+</body>
+</html>

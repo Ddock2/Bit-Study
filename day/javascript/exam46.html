@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function whenSubmit(){
+		// var pass = document.getElementById('pass');
+		// var passCheck = document.getElementById('passCheck');
+		
+		var pass = document.inputForm.pass;
+		var passCheck = document.inputForm.passCheck;
+		
+		if(pass.value != passCheck.value){
+			alert('패스워드와 확인값이 같지 않습니다');
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+	<!--  
+		<input type ="">
+			type : 	text(한줄입력)
+					password(암호처리)
+					checkbox(다중선택)
+					radio(단일선택)
+					file(첨부파일)
+					reset(초기화)
+					hidden(입력받지 않은 데이터 전송)
+					submit(폼에서 입력받은 데이터 전송)
+	 -->
+	<form action="http://www.naver.com"
+		  onsubmit="return whenSubmit()"
+		  name = "inputForm">
+		아이디 : <input type="text" size="20" name="id"><br>
+		패스워드 : <input type="password" size="20" name="pass" id="pass"><br>
+		패스워드 확인 : <input type="password" size="20" name="passCheck" id="passCheck"><br>
+		<input type="submit" value="전송">
+	</form>
+	<!-- http://www.naver.naver.com?id=입력값&pass=입력값&passCheck=입력값 -->
+</body>
+</html>

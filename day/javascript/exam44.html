@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+		이벤트(Event)
+			- 마우스 이벤트
+			- 키보드 이벤트
+			- HTML 프레임 이벤트
+			- HTML 입력양식 이벤트
+			- 유저 인터페이스 이벤트
+	*/
+	window.onload = function(){
+		var btTag = document.getElementById('bt01');
+		console.log(btTag);
+		// Level0방식의 이벤트모델(고전적 이벤트 모델)
+		btTag.onclick = function(){
+			console.log('click...');
+		}
+	}
+	
+	function clickBt() {
+		alert('버튼을 클릭함');
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="Click" id="bt01" onclick="alert('허허')">콘솔<br>
+	
+	<!-- Level0방식의 인라인 이벤트모델 -->
+	<input type="button" value="Click" id="bt02" onclick="alert('허허')">인라인<br>
+	<input type="button" value="Click" id="bt03" onclick="clickBt()">함수<br>
+</body>
+</html>
