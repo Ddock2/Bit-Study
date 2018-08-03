@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body > div{
+		width: 200px;
+		height: 200px;
+		border: groove;
+		border-width: 1px;
+	}
+	td{
+		width: 50px;
+		height: 20px;
+		border: groove;
+		border-width: 1px;
+	}
+	button{
+		width: 30px;
+	}
+	.botkey{
+		width: 80px;
+	}
+	#display{
+		height: 40px;
+	}
+</style>
+<script>
+	var num1 = "";
+	var num2 = "";
+	var sign = "";
+	
+	function input(n){
+		console.log(sign);
+		if(sign == ""){
+			num1 = num1 + n;
+			document.getElementById('display').value = num1;
+		}else{
+			num2 = num2 + n;
+			document.getElementById('display').value = num2;
+		}
+	}
+	
+	function c(){
+		console.log(sign);
+		num1 = "";
+		num2 = "";
+		sign = "";
+		document.getElementById('display').value = "0";
+	}
+	
+	function result(){
+		console.log(sign);
+		if(sign=="+"){
+			document.getElementById('display').value = Number(num1) + Number(num2);
+		}else if(sign=="-"){
+			document.getElementById('display').value = Number(num1) - Number(num2);			
+		}else if(sign=="*"){
+			document.getElementById('display').value = Number(num1) * Number(num2);			
+		}else if(sign=="/"){
+			document.getElementById('display').value = Number(num1) / Number(num2);			
+		}else if(sign=="%"){
+			document.getElementById('display').value = Number(num1) % Number(num2);						
+		}else{
+			document.getElementById('display').value = "error";
+		}
+		console.log(sign);
+		num1 = document.getElementById('display').value;
+		num2 = "0";
+		sign="";
+	}
+	
+	function calc(c){
+		sign = c;
+		console.log(sign);
+		document.getElementById('display').value = "0";
+	}
+</script>
+</head>
+<body>
+	<div>
+		<table id="calc">
+			<tr>
+				<td colspan="4"><input type="text" id="display" value="0"></td>
+			</tr>
+			<tr>
+				<td><button value="7" onclick="input(7);">7</button></td>
+				<td><button value="8" onclick="input(8);">8</button></td>
+				<td><button value="9" onclick="input(9);">9</button></td>
+				<td><button value="/" onclick="calc('/');">/</button></td>
+			<tr>
+				<td><button value="4" onclick="input(4);">4</button></td>
+				<td><button value="5" onclick="input(5);">5</button></td>
+				<td><button value="6" onclick="input(6);">6</button></td>
+				<td><button value="*" onclick="calc('*');">*</button></td>
+			<tr>
+				<td><button value="1" onclick="input(1);">1</button></td>
+				<td><button value="2" onclick="input(2);">2</button></td>
+				<td><button value="3" onclick="input(3);">3</button></td>
+				<td><button value="-" onclick="calc('-');">-</button></td>
+			<tr>
+				<td><button value="0" onclick="input(0);">0</button></td>
+				<td><button value="." onclick="calc('.');">.</button></td>
+				<td><button value="+" onclick="calc('+');">+</button></td>
+				<td><button value="%" onclick="calc('%');">%</button></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button class="botkey" onclick="result();">=</button></td>
+				<td colspan="2"><button class="botkey" onclick="c();">Clear</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
