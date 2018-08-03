@@ -1,0 +1,21 @@
+* 이벤트(Event)
+	- 마우스 이벤트
+	- 키보드 이벤트
+	- HTML 프레임 이벤트
+	- HTML 입력양식 이벤트
+	- 유저 인터페이스 이벤트
+
+----------------------------------------------------------------------------------------------------------------
+<jquery>
+
+	jquery.com -> download -> compressed 3.3.1 우클릭 -> 다른이름으로...
+	
+	$(document).ready(function(){});	: window.onload(function(){});기능
+					 $(function(){}) 으로 축약 가능
+
+
+	- 이벤트 핸들러
+		Mouse			: click, dblclick, mouseenter, mouseleave
+		Keyboard			: keydown, keyup, keypress
+		Form			: submit, focus, blur
+		Document/Window		: load, unload, resize, scroll
