@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		alert('!!!');
+		
+//		$('ul li').hide();
+//		$('ul li:first').hide();
+//		$('ul li:first-child').hide();
+//		$('ul li:last-child').hide();
+//		$("a").hide();
+//		$("a[target]").hide();
+//		$("a[href='http://www.daum.net']").hide();
+//		$('[target]').hide();
+		
+//		$("input[type='button']").hide();
+//		$('input:button').hide();			// 위와 같음
+//		$('[type=button]').hide();
+//		$(':button').hide();				// 내부적으로 button인거 모두 없앰
+//		$('button').hide();
+
+		$(':button').click(function(){
+			//alert('click!');
+			//$(this).hide();					// 클릭한애 숨김
+		})
+		
+		$(':button').click(()=>{
+			//alert('click!!!')
+			$(this).hide();						// 안사라짐 (this)개념이 다름
+		})
+	})
+</script>
+</head>
+<body>
+	<hr>
+	<input type="button" value="BUTTON-1"><br>
+	<button>BUTTON-2</button>
+	<hr>
+	<h2>aTag전</h2>
+	<a href="http://www.daum.net">다음</a>
+	<a href="http://www.naver.com" target="_blank">네이버</a>
+	<h2>aTag후</h2>
+	
+	<hr>
+
+	<h2>동물종류</h2>
+	<ul>
+		<li>호랑이</li>
+		<li>기린</li>
+		<li>곰</li>
+		<li>타조</li>
+	</ul>
+	
+	<h2>음식종류</h2>
+	<ul>
+		<li>쫄면</li>
+		<li>떡볶이</li>
+		<li>순대</li>
+	</ul>
+</body>
+</html>
