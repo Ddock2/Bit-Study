@@ -1,20 +1,12 @@
-* ÀÌº¥Æ®(Event)
-	- ¸¶¿ì½º ÀÌº¥Æ®
-	- Å°º¸µå ÀÌº¥Æ®
-	- HTML ÇÁ·¹ÀÓ ÀÌº¥Æ®
-	- HTML ÀÔ·Â¾ç½Ä ÀÌº¥Æ®
-	- À¯Àú ÀÎÅÍÆäÀÌ½º ÀÌº¥Æ®
-
-----------------------------------------------------------------------------------------------------------------
 <jquery>
 
-	jquery.com -> download -> compressed 3.3.1 ¿ìÅ¬¸¯ -> ´Ù¸¥ÀÌ¸§À¸·Î...
+	jquery.com -> download -> compressed 3.3.1 ìš°í´ë¦­ -> ë‹¤ë¥¸ì´ë¦„ìœ¼ë¡œ...
 	
-	$(document).ready(function(){});	: window.onload(function(){});±â´É
-					 $(function(){}) À¸·Î Ãà¾à °¡´É
+	$(document).ready(function(){});	: window.onload(function(){});ê¸°ëŠ¥
+					 $(function(){}) ìœ¼ë¡œ ì¶•ì•½ ê°€ëŠ¥
 
 
-	- ÀÌº¥Æ® ÇÚµé·¯
+	- ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬
 		Mouse			: click, dblclick, mouseenter, mouseleave
 		Keyboard			: keydown, keyup, keypress
 		Form			: submit, focus, blur
