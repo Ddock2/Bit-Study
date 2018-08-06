@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#bt01').click(function(){
+			$('#p01').html('<mark>셋</mark>');
+		});
+		
+		$('#bt02').click(function(){
+			$('#p02').text('<mark>넷</mark>');
+		});
+		
+		$('#bt03').click(function(){
+			$('#site').attr('href', 'http://wwww.daum.net');
+		});
+		
+		$('#bt04').click(function(){
+			// $('p').html('<strong><em>5다섯</strong></em>');
+		/* 
+			var pTags = document.getElementsByTagName("p");
+			for(var i = 0; i < pTags.length; i++) {
+				var pTag = pTags[i];
+				pTag.innerHTML = "<strong><em>" + i + " : 문장변환</em></strong>";
+			}
+		*/
+		/*
+			for(var i = 0; i < $('p').length; i++) {
+				$('p')[i].innerHTML = "<strong><em>" + i + " : 문장변환!</em></strong>";
+			}
+		*/
+		/* 
+			$('p').html(function(index, innerHTML){
+				return "<strong><em>" + index + " : 문장변환</em></strong>";
+			})
+		*/
+			$('p').text(function(index){
+				return "<strong><em>" + index + " : 문장변환</em></strong>";
+			})
+		});
+	})
+</script>
+</head>
+<body>
+	<a href="http://www.naver.com" id="site">사이트 이동</a>
+	<p id="p01">하나</p>
+	<p id="p02">둘</p>
+	<button id="bt01">HTML변환</button>
+	<button id="bt02">TEXT변환</button>
+	<button id="bt03">주소변환</button>
+	<button id="bt04">문장변환</button>
+</body>
+</html>
