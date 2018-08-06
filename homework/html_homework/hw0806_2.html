@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery/js/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.time').click(function(){
+			var d = new Date();
+			var time = (Number(d.getHours()) + (Number($(this).attr('id'))));
+			if(time>24){
+				time = -1*(24-time);
+			}
+			var str = time + "시 " + d.getMinutes() + "분 " + d.getSeconds() +"초";
+			$('#result').val(str);
+		})
+	})
+</script>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		background-repeat:no-repeat;
+		background-image: url("http://topa.co.kr/wordpress/wp-content/uploads/2015/05/img.map_.01.jpg");
+		background-size: inherit;
+		width: 640px;
+	}
+	
+	.time{
+		width:26.6px;
+		height: 360px;
+		float: left;
+	}
+
+	.time:hover{
+		background-color: gray;
+		opacity: 0.5;
+	}
+</style>
+</head>
+<body>
+	<div class="time" id="-9"></div>
+	<div class="time" id="-8"></div>
+	<div class="time" id="-7"></div>
+	<div class="time" id="-6"></div>
+	<div class="time" id="-5"></div>
+	<div class="time" id="-4"></div>
+	<div class="time" id="-3"></div>
+	<div class="time" id="-2"></div>
+	<div class="time" id="-1"></div>
+	<div class="time" id="0"></div>
+	<div class="time" id="1"></div>
+	<div class="time" id="2"></div>
+	<div class="time" id="3"></div>
+	<div class="time" id="4"></div>
+	<div class="time" id="5"></div>
+	<div class="time" id="6"></div>
+	<div class="time" id="7"></div>
+	<div class="time" id="8"></div>
+	<div class="time" id="9"></div>
+	<div class="time" id="10"></div>
+	<div class="time" id="11"></div>
+	<div class="time" id="12"></div>
+	<div class="time" id="-11"></div>
+	<div class="time" id="-10"></div>
+	<input type="text" size="30" id="result">
+</body>
+</html>

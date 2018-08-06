@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery/js/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		var day;
+		
+		$('p').mouseenter(function(){
+			day = $(this).text();
+			$(this).animate({'padding' : '100px'},100);
+			$(this).append("요일");
+		});
+		
+		$('p').mouseleave(function(){
+			$(this).animate({'padding' : '50px'},100);
+			$(this).empty();
+			$(this).append(day);
+			
+		});
+	});
+</script>
+<style>
+	p{
+		float: left;
+		text-align: center;
+		padding: 50px;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<p style="background-color: red">월</p>
+		<p style="background-color: orange">화</p>
+		<p style="background-color: yellow">수</p>
+		<p style="background-color: green">목</p>
+		<p style="background-color: blue">금</p>
+		<p style="background-color: navy">토</p>
+		<p style="background-color: purple">일</p>
+	</div>
+</body>
+</html>
