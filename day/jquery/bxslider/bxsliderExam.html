@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+    //	$('.slider').bxSlider();
+    	$('.slider').bxSlider({
+			slideWidth: 600,
+			mode: 'fade',
+			captions: true
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="slider">
+    	<div><img src="images/image01.jpg" title="1"></div>
+    	<div><img src="images/image02.jpg" title="2"></div>
+    	<div><img src="images/image03.jpg" title="3"></div>
+    	<div><img src="images/image04.jpg" title="4"></div>
+  	</div>
+</body>
+</html>
