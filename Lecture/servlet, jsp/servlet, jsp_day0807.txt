@@ -1,47 +1,49 @@
 < Servlet >
 	
-	* ¼­ºí¸´ API
-		    : À¥¿¡¼­ µ¿ÀÛÇÏ´Â ¼­ºí¸´ Å¬·¡½º°¡ µÇ±â À§ÇØ¼­´Â ´ÙÀ½ 3°¡Áö Å¬·¡½º Áß ÇÏ³ª¸¦ »ó¼Ó¹Þ¾Æ¼­ ÀÛ¼º
-		Servlet		ÀÎÅÍÆäÀÌ½º
-		GenericServlet	Ãß»óÅ¬·¡½º
-		HttpServlet	Ãß»óÅ¬·¡½º
+	* ì„œë¸”ë¦¿ API
+		    : ì›¹ì—ì„œ ë™ìž‘í•˜ëŠ” ì„œë¸”ë¦¿ í´ëž˜ìŠ¤ê°€ ë˜ê¸° ìœ„í•´ì„œëŠ” ë‹¤ìŒ 3ê°€ì§€ í´ëž˜ìŠ¤ ì¤‘ í•˜ë‚˜ë¥¼ ìƒì†ë°›ì•„ì„œ ìž‘ì„±
+		Servlet		ì¸í„°íŽ˜ì´ìŠ¤
+		GenericServlet	ì¶”ìƒí´ëž˜ìŠ¤
+		HttpServlet	ì¶”ìƒí´ëž˜ìŠ¤
 
-	* ¼­ºí¸´ »ý¸íÁÖ±â
-		     : ¼­ºí¸´ Å¬·¡½º´Â Áöº»ÀûÀÎ ¸Þ¼Òµå È£Ãâ¼ø¼­(LifeCycle)°¡ Á¸Àç
-		init	: ÃÖÃÊ ÇÑ¹ø¸¸ ½ÇÇà
-		service	: »ç¿ëÀÚ ¿äÃ»¿¡ ´ëÇÑ ½ÇÁ¦ ÀÀ´ä Ã³¸® ÁøÇà
-		destroy	: ¸Þ¸ð¸®¿¡¼­ ÇØÁ¦µÉ °æ¿ì È£Ãâ (ex> ¼­ºí¸´ ³»¿ëÀÌ º¯°æ, ¼­¹ö Àç±¸µ¿..)
+	* ì„œë¸”ë¦¿ ìƒëª…ì£¼ê¸°
+		     : ì„œë¸”ë¦¿ í´ëž˜ìŠ¤ëŠ” ì§€ë³¸ì ì¸ ë©”ì†Œë“œ í˜¸ì¶œìˆœì„œ(LifeCycle)ê°€ ì¡´ìž¬
+		init	: ìµœì´ˆ í•œë²ˆë§Œ ì‹¤í–‰
+		service	: ì‚¬ìš©ìž ìš”ì²­ì— ëŒ€í•œ ì‹¤ì œ ì‘ë‹µ ì²˜ë¦¬ ì§„í–‰
+		destroy	: ë©”ëª¨ë¦¬ì—ì„œ í•´ì œë  ê²½ìš° í˜¸ì¶œ (ex> ì„œë¸”ë¦¿ ë‚´ìš©ì´ ë³€ê²½, ì„œë²„ ìž¬êµ¬ë™..)
 
 			init -> service -> destroy -> service -> destroy ....
 
-	ÅèÄ¹¿¡¼­ ¼­¹ö¸¦ ±¸ÇöÇßÀ»¶§ ÇØ´ç ¼­¹ö°¡ ÀÚ¹Ù¸¦ ÀÌ¿ëÇÒ ¼ö ÀÖ´Â ¿£ÁøÀ» °¡Áö°í ÀÚ¹Ù¸¦ Á¢¸ñÇÏ±â À§ÇØ¼­ WEB-INF Æú´õ ÀÖÀ½
+	í†°ìº£ì—ì„œ ì„œë²„ë¥¼ êµ¬í˜„í–ˆì„ë•Œ í•´ë‹¹ ì„œë²„ê°€ ìžë°”ë¥¼ ì´ìš©í•  ìˆ˜ ìžˆëŠ” ì—”ì§„ì„ ê°€ì§€ê³  ìžë°”ë¥¼ ì ‘ëª©í•˜ê¸° ìœ„í•´ì„œ WEB-INF í´ë” ìžˆìŒ
 	
-	WEB-INF	: classes	- ¼­ºí¸´°ü·Ã ÆÄÀÏµéÀÌ ÀÖÀ½(.class, ¹ÙÀÌ³Ê¸®ÆÄÀÏ)
-		  lib  	- ¿ÜºÎ jar µå¶óÀÌ¹ö
-		  web.xml	- È¯°æ¼³Á¤ÆÄÀÏ
+	WEB-INF	: classes	- ì„œë¸”ë¦¿ê´€ë ¨ íŒŒì¼ë“¤ì´ ìžˆìŒ(.class, ë°”ì´ë„ˆë¦¬íŒŒì¼)
+		  lib  	- ì™¸ë¶€ jar ë“œë¼ì´ë²„
+		  web.xml	- í™˜ê²½ì„¤ì •íŒŒì¼
 	
-	WEB-INF º¸¾ÈÆú´õÀÌ±â ¶§¹®¿¡ ¿ÜºÎ¿¡¼­ Á¢±ÙÇÏ±â À§ÇØ¼­ °¡»óurlÇÊ¿ä
-		servlet 2.5 ¹öÀü±îÁö web.xml·Î ¸ÅÇÎ
-		servlet 3.0 ¹öÀüºÎÅÍ ¾î³ëÅ×ÀÌ¼ÇÀ» ÀÌ¿ëÇÏ¿© °¡»ó°æ·Î¿Í ½ÇÁ¦ ÆÄÀÏÀ» ¸ÅÇÎ
+	WEB-INF ë³´ì•ˆí´ë”ì´ê¸° ë•Œë¬¸ì— ì™¸ë¶€ì—ì„œ ì ‘ê·¼í•˜ê¸° ìœ„í•´ì„œ ê°€ìƒurlí•„ìš”
+		servlet 2.5 ë²„ì „ê¹Œì§€ web.xmlë¡œ ë§¤í•‘
+		servlet 3.0 ë²„ì „ë¶€í„° ì–´ë…¸í…Œì´ì…˜ì„ ì´ìš©í•˜ì—¬ ê°€ìƒê²½ë¡œì™€ ì‹¤ì œ íŒŒì¼ì„ ë§¤í•‘
 
-	Apache Software Foundation/Tomcat 8.0/lib/servlet-api.jar¸¦ WEB-INF/lib¿¡ º¹»çÇØ¼­ API import °¡´É
+	Apache Software Foundation/Tomcat 8.0/lib/servlet-api.jarë¥¼ WEB-INF/libì— ë³µì‚¬í•´ì„œ API import ê°€ëŠ¥
 	
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-	get¹æ½Ä	: url·Î Á¤º¸Àü´Þ È¤Àº formÅÂ±× method="get"À¸·Î Á¤º¸Àü´Þ		// ¿Ø¸¸ÇÏ¸é get¹æ½Ä
-	post¹æ½Ä	: fromÅÂ±×·Î ¼Ó¼º¿¡ method="post"·Î Á¤º¸Àü´Þ
+	getë°©ì‹	: urlë¡œ ì •ë³´ì „ë‹¬ í˜¹ì€ formíƒœê·¸ method="get"ìœ¼ë¡œ ì •ë³´ì „ë‹¬		// ì™ ë§Œí•˜ë©´ getë°©ì‹
+	postë°©ì‹	: fromíƒœê·¸ë¡œ ì†ì„±ì— method="post"ë¡œ ì •ë³´ì „ë‹¬
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 < JSP >
 	
-	* ±¸¼º¿ä¼Ò
+	* êµ¬ì„±ìš”ì†Œ
 		- HTML
-		- Áö½Ã¹®
-		- ½ºÅ©¸³Æ®
-		- ÁÖ¼®¹®
-		- ±âº» °´Ã¼ (Implict Object)
-	¡Ú	- Ç¥Çö ¾ð¾î (Expression Language)
-	¡Ú	- Ç¥ÁØ ÅÂ±× ¶óÀÌºê·¯¸® (JSTL)
-		- Ç¥ÁØ ¾×¼Ç ÅÂ±× (Action Tag)
-		- Ä¿½ºÅÒ ÅÂ±× (Custom Tag)
+		- ì§€ì‹œë¬¸				: íŽ˜ì´ì§€ ë‚´ ì„¤ì • ì •ì˜	 <%@	%>
+		- ìŠ¤í¬ë¦½íŠ¸				: ìžë°”ì½”ë“œë¥¼ ì‹¤í–‰í•  ë•Œ ì‚¬ìš©ë˜ëŠ” ì½”ë“œ ë¸”ë¡ <%	%>
+						  <%=ë³€ìˆ˜%> ë³€ìˆ˜ë¥¼ htmlì— ì§ì ‘ ë„£ìŒ
+
+		- ì£¼ì„ë¬¸				: <%--	--%>
+		- ê¸°ë³¸ ê°ì²´ (Implict Object)
+	â˜…	- í‘œí˜„ ì–¸ì–´ (Expression Language)
+	â˜…	- í‘œì¤€ íƒœê·¸ ë¼ì´ë¸ŒëŸ¬ë¦¬ (JSTL)
+		- í‘œì¤€ ì•¡ì…˜ íƒœê·¸ (Action Tag)
+		- ì»¤ìŠ¤í…€ íƒœê·¸ (Custom Tag)
