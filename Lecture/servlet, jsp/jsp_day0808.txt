@@ -25,7 +25,7 @@
 		<%
 			// pageContext, request, session, application
 			//공유영역.setAttrivute(name, value)
-			pageContext.setAttribute("id", "hong1234");	// setAttribute(객체, 값) 등록, getAttribute(객체) 조회, removeAttribute() 삭제
+			pageContext.setAttribute("id", "hong1234");	// setAttribute(이름, 값) 등록, getAttribute(이) 조회, removeAttribute(이름) 삭제
 			pageContext.setAttribute("name", "홍길동");
 			request.setAttribute("name", "임꺽정");
 			session.setAttribute("userInfo", "sbc:1234");
