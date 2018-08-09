@@ -1,38 +1,38 @@
 * EL (Expression Language)
 	
-	- HTML¿¡ Java°¡ ¼¯¿© ¾²´Â°ÍÀ» ¹æÁö
-	- Ç¥Çö½Ä(<%=...%>) ´ë½Å »ç¿ë
-	- ÀÚ¹ÙÀÇ Å¬·¡½º ¸Þ¼Òµå È£Ãâ ¹× ÁýÇÕ °´Ã¼¿¡ ´ëÇÑ Á¢±Ù ¹æ¹ýÀ» Á¦°ø
-	- JSP¿¡¼­ Á¦°øÇÏ´Â ³»Àå°´Ã¼ Áß 4°¡Áö ±âº» ¿µ¿ª¿¡ ´ëÇÑ ¼Ó¼º »ç¿ë
-	- ±¸¹®	: ${ expr }
-	- »ç¿ë ¿¹	: ´ç½ÅÀÇ ÀÌ¸§Àº ${ name } ÀÔ´Ï´Ù.
+	- HTMLì— Javaê°€ ì„žì—¬ ì“°ëŠ”ê²ƒì„ ë°©ì§€
+	- í‘œí˜„ì‹(<%=...%>) ëŒ€ì‹  ì‚¬ìš©
+	- ìžë°”ì˜ í´ëž˜ìŠ¤ ë©”ì†Œë“œ í˜¸ì¶œ ë° ì§‘í•© ê°ì²´ì— ëŒ€í•œ ì ‘ê·¼ ë°©ë²•ì„ ì œê³µ
+	- JSPì—ì„œ ì œê³µí•˜ëŠ” ë‚´ìž¥ê°ì²´ ì¤‘ 4ê°€ì§€ ê¸°ë³¸ ì˜ì—­ì— ëŒ€í•œ ì†ì„± ì‚¬ìš©
+	- êµ¬ë¬¸	: ${ expr }
+	- ì‚¬ìš© ì˜ˆ	: ë‹¹ì‹ ì˜ ì´ë¦„ì€ ${ name } ìž…ë‹ˆë‹¤.
 		<%=request.getParameter("name")%> 	=>	${ param.name }
 		<%String[] hobbys = request.getParameterValues("hobby");%>
 		<%=request.getParameter("hobbys[0]")%>			=> ${ paramValues.hobby[0] }
 
-	* EL¿¡¼­ °´Ã¼ Ã£±â
-		1. EL¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â °´Ã¼¿¡¼­ µ¿ÀÏÇÑ °´Ã¼ÀÌ¸§À» Ã£´Â´Ù
-		2. EL¿¡¼­ ±âº»ÀûÀ¸·Î Á¦°øÇÏ´Â °´Ã¼¿¡¼­ Ã£Áö ¸øÇß´Ù¸é, 4°¡Áö °øÀ¯¿µ¿ª¿¡¼­ °´Ã¼¸¦ Ã£´Â´Ù
+	* ELì—ì„œ ê°ì²´ ì°¾ê¸°
+		1. ELì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ê°ì²´ì—ì„œ ë™ì¼í•œ ê°ì²´ì´ë¦„ì„ ì°¾ëŠ”ë‹¤
+		2. ELì—ì„œ ê¸°ë³¸ì ìœ¼ë¡œ ì œê³µí•˜ëŠ” ê°ì²´ì—ì„œ ì°¾ì§€ ëª»í–ˆë‹¤ë©´, 4ê°€ì§€ ê³µìœ ì˜ì—­ì—ì„œ ê°ì²´ë¥¼ ì°¾ëŠ”ë‹¤
 			JSP	pageContext  - request          - session         - application
 			EL	pageScope    - requestScope  - sessionScope - applicationScope
 		
-			¿ÞÂÊºÎÅÍ ¼øÂ÷ÀûÀ¸·Î Ã£°í ¸ÕÀú ³ª¿À¸é ¸ÕÀú ³ª¿Â °´Ã¼¸¦ °¡Á®¿È 
-		3. ÁöÁ¤¿µ¿ª¿¡¼­¸¸ Ã£´Â¹ý
-			${ °øÀ¯¿µ¿ª.name }
-			${ requestScope.name } ÇÏ¸é requestScope ¿µ¿ª¿¡¼­¸¸ Ã£À½
+			ì™¼ìª½ë¶€í„° ìˆœì°¨ì ìœ¼ë¡œ ì°¾ê³  ë¨¼ì € ë‚˜ì˜¤ë©´ ë¨¼ì € ë‚˜ì˜¨ ê°ì²´ë¥¼ ê°€ì ¸ì˜´ 
+		3. ì§€ì •ì˜ì—­ì—ì„œë§Œ ì°¾ëŠ”ë²•
+			${ ê³µìœ ì˜ì—­.name }
+			${ requestScope.name } í•˜ë©´ requestScope ì˜ì—­ì—ì„œë§Œ ì°¾ìŒ
 
-		4. °øÀ¯¿µ¿ª¿¡ °´Ã¼ µî·Ï, Á¶È¸, »èÁ¦ÇÏ±â
+		4. ê³µìœ ì˜ì—­ì— ê°ì²´ ë“±ë¡, ì¡°íšŒ, ì‚­ì œí•˜ê¸°
 		<%
 			// pageContext, request, session, application
-			//°øÀ¯¿µ¿ª.setAttrivute(name, value)
-			pageContext.setAttribute("id", "hong1234");
-			pageContext.setAttribute("name", "È«±æµ¿");
-			request.setAttribute("name", "ÀÓ²©Á¤");
+			//ê³µìœ ì˜ì—­.setAttrivute(name, value)
+			pageContext.setAttribute("id", "hong1234");	// setAttribute(ê°ì²´, ê°’) ë“±ë¡, getAttribute(ê°ì²´) ì¡°íšŒ, removeAttribute() ì‚­ì œ
+			pageContext.setAttribute("name", "í™ê¸¸ë™");
+			request.setAttribute("name", "ìž„êº½ì •");
 			session.setAttribute("userInfo", "sbc:1234");
 		%>
 		<body>
-			id : ${ id }<br>			<%-- hong1234 Ãâ·Â -->
-			name : ${ name }<br>		<%-- È«±æµ¿ Ãâ·Â -->
-			name : ${ requestScope.name }<br>	<%-- ÀÓ²©Á¤ Ãâ·Â -->
-			userInfo : ${ userInfo }<br>		<%-- sbc:1234 Ãâ·Â -->
-			userInfo : ${ sessionScope.userInfo }<br>	<%-- sbc:1234 Ãâ·Â -->
+			id : ${ id }<br>			<%-- hong1234 ì¶œë ¥ -->
+			name : ${ name }<br>		<%-- í™ê¸¸ë™ ì¶œë ¥ -->
+			name : ${ requestScope.name }<br>	<%-- ìž„êº½ì • ì¶œë ¥ -->
+			userInfo : ${ userInfo }<br>		<%-- sbc:1234 ì¶œë ¥ -->
+			userInfo : ${ sessionScope.userInfo }<br>	<%-- sbc:1234 ì¶œë ¥ -->
