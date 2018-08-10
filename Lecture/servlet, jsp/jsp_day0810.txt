@@ -1,0 +1,72 @@
+* 페이지 포함
+	- 페이지마다 중복되는 공통부분 처리
+	- 공통부분 따로 파일 만들어 쓸때마다 가져와 씀
+
+	- 페이지 내용을 포함하는 3가지 방식
+	
+		1. directive(지시자)	: include
+		2. action(액션)	: include		// 가장 많이 쓰임
+		3. JSTL		: import
+	
+	
+	1. 지시자 - include
+		      다른 페이지의 코드를 내 페이지로 포함 => 코드 복붙
+		
+		- 구문	: <%@ include file = "파일경로" %>
+		- 시점	: jsp가 java로 변환될 때 같이 포함
+		- 활용	: jsp 페이지에서 사용되는 공통 변수 지정
+			 각 페이지에 고정적으로 사용되는 내용 처리 ex) 사이트 하단부분(footer)
+		
+	2. 액션 - include
+		      다른 페이지의 실행 결과를 내 페이지로 포함시킴        => 인터럽트방식(함수, 메소드)처럼 실행
+		★   파라미터와 공유영역(request) 이용하여 데이터를 공유 => page 외 공유영역 모두 공유됨
+		
+		- 구문	: <jsp:include page="파일경로" />
+				
+			  <jsp:include page="파일경로">
+				<jsp:param name="msg" value="test" />		=> ?msg=test 랑 같은효과
+			  </jsp:include>
+		- 시점	: 실행 시 (실행된 결과값이 포함)
+		- 활용	: JSP 페이지내의 중복적인 부분을 처리 ex) 메뉴(함수처럼)
+	
+	3. JSTL - import
+		      다른 페이지의 실행 결과를 내 페이지로 포함시킴
+		
+		- 구문	: <c:import url="파일경로" />
+			
+			  <c:import url="파일경로">
+				<c:param name="msg" value="test" />		=> ?msg=test 랑 같은효과
+			  </c:import>
+
+		- action include 차이점 : 다른 서버에 있는 파일도 가능
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+* 페이지 이동
+	
+	
+	액션 - forward
+		     호출된 페이지에서 다른 페이지로 요청 처리가 이동	// url은 호출된 페이지(클라이언트는 다른페이지가 한지 모름)
+		     파라미터와 공유영역(request) 이용하여 데이터를 공유
+		
+		- 구문	: <jsp:forward path = "파일경로" />
+			
+			  <jsp:forward path = "파일경로">
+				<jsp:param name="msg" value="test" />
+			  </jsp:forward>
+		- 활용	: jsp 페이지에서 조건에 따른 페이지 이동
+
+			forward로 이동하면 이동전 페이지의 출력값은 안뜸
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+	http://localhost:8000/Mission-Web/jsp/board/aaa.jsp
+
+		<a href="/Mission-Web/jsp/board/aaa.jsp">
+		
+		location.href="/Mission-Web/jsp/board/aaa.jsp"
+
+	     == include, forward, xml에서 / 경로
+		<%@ include file="jsp/board/aaa.jsp" %>
+		<jsp:forward page="jsp/board/aaa.jsp" />
+		
