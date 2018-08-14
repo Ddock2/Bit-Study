@@ -1,0 +1,6 @@
+<form action="uploadInfo.jsp" method="post" enctype="multipart/form-data">
+
+cos.jar
+	http://servlets.com/cos/에서 zip파일 다운
+	압축 풀기
+	WEB-INF / lib 에 cos.jar 복사
