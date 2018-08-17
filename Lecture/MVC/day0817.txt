@@ -1,0 +1,8 @@
+* Model 2 방식
+	MVC (Model VIew Contoller) : 비지니스 로직과 출력을 분리시키는 방식
+
+	Servlet파일이 요청을 받고 DB에 접근 CRUD한 후 자바로 정리
+	출력할 값 공유영역에 올리고 forward이용하여
+	JSP파일이 HTML문서 작성 후 응답
+	(java와 html 분리)
+
