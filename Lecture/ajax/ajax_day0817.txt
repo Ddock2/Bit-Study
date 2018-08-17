@@ -1,0 +1,22 @@
+jQuery로 AJAX
+
+	$.ajax({
+		type : '',
+		url : '',
+		....
+	});
+
+		type	메소드(문자열)
+		url	요청주소(문자열)
+		data	파라미터(문자열, 객체)
+		success	수신성공(함수)
+		error	수신실패(함수)
+		async	동기/비동기설정(기본값 : 비동기)
+		dataType	자료형입력(외부json은 jsonp로)
+
+
+	$.get()
+	$.post()
+
+
+크롬 확장프로그램 - postman 검색 맨위 관련프로그램 가서 postman
