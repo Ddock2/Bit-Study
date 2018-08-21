@@ -1,0 +1,6 @@
+ServletContext : 모든 Servlet끼리 공유영역
+
+ServletConfig : 하나의 Servlet의 환경설정
+
+Listener : 맨 처음 서버시작할 때 만들어지는 공간(서블릿 시작 전에 만들어짐)
+
