@@ -1,0 +1,164 @@
+< Spring >
+	help-eclipse Marketplace - STS(Spring Tool Suit) : 스프링용 편집기
+
+* 환경설정
+
+Maven project
+	http://maven.apache.org/ => Download => File => apache-maven-3.5.4-bin.zip => Lecture폴더에 풀기
+	환경설정(시스템 - 고급 시스템 설정)
+		M2_HOME	=> 위에 푼 maven폴더
+		JAVA_HOME	=> jdk1.8.0_171 폴더
+		시스템변수 Path	=> 새로만들기 => maven/bin 폴더
+	apache-maven-3.5.4/conf/settings.xml
+		
+ 		 <!-- localRepository
+ 		  | The path to the local repository maven will use to store artifacts.
+ 		  |
+		  | Default: ${user.home}/.m2/repository
+주석에서 빼고		 -->                                   
+ ★여기바꾸기	 <localRepository>D:/Lecture/maven-repository</localRepository>
+ 		  
+
+	
+	이클립스 : window => preferences => Maven => User Settiongs => User Settings를 settings.xml로 바꾸기
+	
+	project 생성 : maven project로 만들기 (create a simple project 체크)
+					Group Id		: kr.co.mlec
+					Artifact Id	: Lecture-Spring
+
+	pom.xml		: macen 관련 설정파일
+	src/main/java	: 소스 파일 작성
+	src/main/resources	: 자원 파일 작성
+	
+----------------------------------------------------------------------------------------------------------
+
+	mvnrepository.com => Spring-Context 검색 => 맨위 => 4.3.18.RELEASE  => Maven 복사
+			=> pom.xml에 <dependency>태그 만들고 사이에 붙여넣기
+
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+			<dependency>
+		   		 <groupId>org.springframework</groupId>
+		    		<artifactId>spring-context</artifactId>
+		    		<version>4.3.18.RELEASE</version>
+			</dependency>
+ 		 </dependencies>
+
+----------------------------------------------------------------------------------------------------------
+미리 객체 생성 후 필요할때 객체 생성 안하고 불러옴
+
+	* Spring IoC(Inversion of Control) : 제어 역행
+		- 인스턴스의 생명주기 관리를 개발자가 아닌 컨테이너(시스템)이 처리함
+	
+	* DI(Dependency Inject) : 의존 주입	
+		- Spring에서 Ioc를 제공하는 형태 중 하나( DL, DI )
+		- 종류
+			Setter Injection
+			Constructor Injection
+
+		- 의존 : 객체간의 의존관계를 의미
+
+----------------------------------------------------------------------------------------------------------
+	기존 코드 작성 방식
+		필요한 위치에서 객체 생성
+		인터페이스를 활용한 객체 생성
+		별도의 조립기 클래스를 활용하여 객체 생성
+
+	개선방법
+		Spring 에서 제공하는 DI 활용
+		개발자가 코드에서 직접 객체 생성하지 않는 방식
+		XML 환경 설정파일 또는 어노테이션을 이용하여 객체를 주입
+
+----------------------------------------------------------------------------------------------------------
+* Container
+	Spring Container
+		Spring 프레임워크에서 Container 기능을 제공해 주는 클래스를 의미
+		Container 		: Bean 클래스를 관리(생성, 삭제 등) 하는 주체
+		Bean	 		: Spring에서 관리되는 클래스 객체를 나타냄
+		Container 초기화 방법	: 설정 정보 Xml 파일을 읽고 Containcer에 로딩
+
+	Container 종류
+		1. BeanFactory
+			- XmlBeanFactory
+		2. ApplicationContext
+			- ClassPathXmlApplicationContext
+			- FileSystemXmlApplicationContext
+			- GenericXmlApplicationContext (위에 두개 합쳐진 개념)
+			- XmlWebApplicationContext
+
+	Container - XML
+		
+	Container -Bean
+		Bean 클래스
+			Spring 프레임웤에 의해 LifeCycle이 관리되는 클래스
+			일반 POJO 기반의 클래스 (순수자바)
+			XML에 <bean /> 태그를 이용하여 등록
+			<bean>태그의 속성
+				id	: 여러개의 Bean 클래스를 식별하기 위한 이름 설정
+				name	: id 속성과 동일한 의미
+				class	: 사용하려는 Bean 클래스의 패키지명을 포함한 클래스명
+		@ id와 name 속성의 차이
+			설정될 수 있는 값에 차이가 있음 : id 속성은 자바 명명규칙을 따름
+						(숫자를 우선 할 수 없고 "/"와 같은 특수기호 사용불가)
+
+
+----------------------------------------------------------------------------------------------------------
+이클립스 - window - preferences - xml - xml files - templates - new
+
+	beans-basic
+
+	spring에서 beans 관련설정(basic)
+
+	<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	</beans>
+
+설정하면 xml파일에서 beans치고 단축키 사용 가능
+	
+<beans> 태그에 <bean> 들 있음	bean 모양 : <bean class="basic.Hello" id="hello" />
+
+----------------------------------------------------------------------------------------------------------
+	Container - BeanFactory
+
+		Bean의 LifeCycle(생성과 소멸)을 관리
+		BeanFactory 객체는 XmBeanFactory 클래스를 이용하여 초기화
+		Resource 클래스를 이용하여 Xml 파일을 로딩한 후 사용
+
+		Resource 클래스
+			ClassPathResource   : src/main/resource 밑부터 씀
+			FileSystemResource : src부터 다 써야됨
+
+	Container - ApplicationContext
+
+		BeanFactory 기능 외에 추가적인 기능 제공
+			: 국제화를 지원, 자원을 로딩하는 범용적 방법 제공, 이벤트 처리		
+
+		BeanFactory와의 차이점
+			: 빈을 컨테이너에 로딩하는 시점이 컨텍스트가 시작되기 전에 모든 빈을 
+			  미리 로딩하여 빈이 필요할 때 바로 사용할 수 있도록 함
+				(빈 속성 lazy-init="true"을 넣으면 getBean해야 생성)
+				(빈 속성 factory-method="getInstance"을 넣으면 객체 생성시 해당 메소드로 생성)
+		Context 클래스
+			ClassPathXmlApplicationContext
+			FileSystemXmlApplicationContext
+		★	GenericXmlApplicationContext
+
+	DI (Dependency Injection)
+		각 Bean 간의 의존관계 설정을 xml 파일에 등록
+		프로그램 코드에서는 직접 빈을 획득하기 위한 코드를 사용할 필요가 없음
+		Container가 자체적으로 필요한 객체를 넘겨줘서 사용하는 방식
+		- 사용방식
+			1. Constructor Injection
+			2. Setter Injection
+
+
+
+
+
+
+
+
+
+
+
