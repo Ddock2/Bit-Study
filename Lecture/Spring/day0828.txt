@@ -1,0 +1,11 @@
+mvnrepository.com에서 검색
+	spring-mvc	4.3.18ver
+	servlet-api	3.1.0ver
+	jsp-api		2.3.3ver
+
+pom.xml		dependencies태그에 복붙
+
+-----------------------------------------------------------------------------------------
+@ResponseBody = @RestController
+
+Spring powerpoint 보기
