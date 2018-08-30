@@ -1,15 +1,15 @@
 < Annotation >
 	
-	* DI ÀÚµ¿ ÁÖÀÔ
-		XML ÆÄÀÏÀÌ ³Ê¹« Ä¿Áö´Â °ÍÀ» ¹æÁö
-		ÀÚµ¿ ÁÖÀÔ ±â´É »ç¿ë½Ã ½ºÇÁ¸µÀÌ ¾Ë¾Æ¼­ ÀÇÁ¸ °´Ã¼¸¦ Ã£¾Æ¼­ ÁÖÀÔ
+	* DI ìžë™ ì£¼ìž…
+		XML íŒŒì¼ì´ ë„ˆë¬´ ì»¤ì§€ëŠ” ê²ƒì„ ë°©ì§€
+		ìžë™ ì£¼ìž… ê¸°ëŠ¥ ì‚¬ìš©ì‹œ ìŠ¤í”„ë§ì´ ì•Œì•„ì„œ ì˜ì¡´ ê°ì²´ë¥¼ ì°¾ì•„ì„œ ì£¼ìž…
 
-		ÀÚµ¿ ÁÖÀÔ ±â´É »ç¿ë ¹æ¹ý
-			- XMLÆÄÀÏ¿¡ <context:annotation-config /> ¼³Á¤À» Ãß°¡
-			- JavaÆÄÀÏ¿¡ ÀÇÁ¸ÁÖÀÔ´ë»ó¿¡ @Autowired ¶Ç´Â @Resource ¼³Á¤
-						(Spring¿¡¼­ Á¦°ø)  (java ÀÚÃ¼¿¡¼­ Á¦°ø)
+		ìžë™ ì£¼ìž… ê¸°ëŠ¥ ì‚¬ìš© ë°©ë²•
+			- XMLíŒŒì¼ì— <context:annotation-config /> ì„¤ì •ì„ ì¶”ê°€
+			- JavaíŒŒì¼ì— ì˜ì¡´ì£¼ìž…ëŒ€ìƒì— @Autowired ë˜ëŠ” @Resource ì„¤ì •
+						(Springì—ì„œ ì œê³µ)  (java ìžì²´ì—ì„œ ì œê³µ)
 	
-	* XML ¼³Á¤
+	* XML ì„¤ì •
 		<beans
 			.............
 			xmlns:context="http://www.springframework.org/schema/context"
@@ -21,53 +21,54 @@
 		</beans>
 
 	* @Autowired			// di_anno01
-	       java ¼³Á¤
-		- º¯¼ö ¼³Á¤
-		- »ý¼ºÀÚ ¼³Á¤
-		- set ¸Þ¼­µå ¼³Á¤
+	       java ì„¤ì •
+		- ë³€ìˆ˜ ì„¤ì •
+		- ìƒì„±ìž ì„¤ì •
+		- set ë©”ì„œë“œ ì„¤ì •
 
 	* @Resource			// di_anno02
-	       java ¼³Á¤
-		- º¯¼ö ¼³Á¤
-		- »ý¼ºÀÚ ¼³Á¤ ºÒ°¡
-		- set ¸Þ¼­µå ¼³Á¤
+	       java ì„¤ì •
+		- ë³€ìˆ˜ ì„¤ì •
+		- ìƒì„±ìž ì„¤ì • ë¶ˆê°€
+		- set ë©”ì„œë“œ ì„¤ì •
 	
-	°´Ã¼ Ã£´Â ¼ø¼­
+	ê°ì²´ ì°¾ëŠ” ìˆœì„œ
 		@Autowired
 			1. type matching
-			2. µÎ°³ ÀÌ»óÀÌ¸é @Qualifier°¡ ¸í½ÃµÈ ºó°´Ã¼ Ã£À½
-			3. µÎ°³ ÀÌ»óÀÌ°í @Qualifier°¡ ¾øÀ» °æ¿ì name matching
-			4. À§ °æ¿ì ´Ù ¾øÀ» ½Ã error
+			2. ë‘ê°œ ì´ìƒì´ë©´ @Qualifierê°€ ëª…ì‹œëœ ë¹ˆê°ì²´ ì°¾ìŒ
+			3. ë‘ê°œ ì´ìƒì´ê³  @Qualifierê°€ ì—†ì„ ê²½ìš° name matching
+			4. ìœ„ ê²½ìš° ë‹¤ ì—†ì„ ì‹œ error
 		@Resource
 			1. name matching
 			2. type matching
 
 	* component-scan
-		xmlÆÄÀÏ ¼³Á¤À» ÅëÇØ¼­ ÀÚµ¿À¸·Î ºóÀ¸·Î »ç¿ë µÉ °´Ã¼¸¦ µî·ÏÇÑ´Ù.
+		xmlíŒŒì¼ ì„¤ì •ì„ í†µí•´ì„œ ìžë™ìœ¼ë¡œ ë¹ˆìœ¼ë¡œ ì‚¬ìš© ë  ê°ì²´ë¥¼ ë“±ë¡í•œë‹¤.
 
 		- <context:component-scan base-package="kr.co.mlec" />
-		- ÁöÁ¤µÈ ÆÐÅ°Áö ÇÏÀ§ÀÇ ¸ðµç ÆÐÅ°Áö¸¦ ½ºÄµÇÏ¿© ºóÀ¸·Î µî·Ï
-		- ºóÀ¸·Î µî·ÏµÇ·Á¸é ÀÚ¹Ù Å¬·¡½º¿¡¼­ ¾î³ëÅ×ÀÌ¼ÇÀ» »ç¿ëÇØ¾ß ÇÑ´Ù.
+		- ì§€ì •ëœ íŒ¨í‚¤ì§€ í•˜ìœ„ì˜ ëª¨ë“  íŒ¨í‚¤ì§€ë¥¼ ìŠ¤ìº”í•˜ì—¬ ë¹ˆìœ¼ë¡œ ë“±ë¡
+		- ë¹ˆìœ¼ë¡œ ë“±ë¡ë˜ë ¤ë©´ ìžë°” í´ëž˜ìŠ¤ì—ì„œ ì–´ë…¸í…Œì´ì…˜ì„ ì‚¬ìš©í•´ì•¼ í•œë‹¤.
 		- @Component, @Controller, @Service, @Repository
 
-			- µ¿ÀÛÀº °°Áö¸¸ º¸Åë Å¬·¡½º ±¸ºÐ
-				@Component	: °ªµéÀ» ÀúÀåÇÏ´Â Å¬·¡½º(VO)
-				@Service		: ÀÛ¾÷À» ÇÏ´Â Å¬·¡½º(ºñÁö´Ï½º ·ÎÁ÷)
+			- ë™ìž‘ì€ ê°™ì§€ë§Œ ë³´í†µ í´ëž˜ìŠ¤ êµ¬ë¶„
+				@Component	: ê°’ë“¤ì„ ì €ìž¥í•˜ëŠ” í´ëž˜ìŠ¤(VO)
+				@Service		: ìž‘ì—…ì„ í•˜ëŠ” í´ëž˜ìŠ¤(ë¹„ì§€ë‹ˆìŠ¤ ë¡œì§)
+				@Repository	: DAO
 
-		- beanÅÂ±× id¼Ó¼ºÀÌ Å¬·¡½ºÀÇ Ã¹±ÛÀÚ¸¦ ¼Ò¹®ÀÚ·Î ÇÏ¿© ÁöÁ¤µÊ
-		- @Component("id")·Î ¾ÆÀÌµð ÁöÁ¤°¡´É
+		- beaníƒœê·¸ idì†ì„±ì´ í´ëž˜ìŠ¤ì˜ ì²«ê¸€ìžë¥¼ ì†Œë¬¸ìžë¡œ í•˜ì—¬ ì§€ì •ë¨
+		- @Component("id")ë¡œ ì•„ì´ë”” ì§€ì •ê°€ëŠ¥
 	
 ----------------------------------------------------------------------------------------------------------
-		@Resource(name="id") 	ÇØ¼­ ÁÖÀÔÇÒ °´Ã¼ÀÇ id¸¦ Ã£¾Æ ¾¸
+		@Resource(name="id") 	í•´ì„œ ì£¼ìž…í•  ê°ì²´ì˜ idë¥¼ ì°¾ì•„ ì”€
 ----------------------------------------------------------------------------------------------------------
 		@Autowired		
-		@Qualifier("id")		ÇØ¼­ ÁÖÀÔÇÒ °´Ã¼ÀÇ id¸¦ Ã£¾Æ ¾¸
-					@Qualifier´Â ÀÔ·ÁÇÏ·Á´Â º¯¼ö¸¶´Ù ¼³Á¤
+		@Qualifier("id")		í•´ì„œ ì£¼ìž…í•  ê°ì²´ì˜ idë¥¼ ì°¾ì•„ ì”€
+					@QualifierëŠ” ìž…ë ¤í•˜ë ¤ëŠ” ë³€ìˆ˜ë§ˆë‹¤ ì„¤ì •
 
 		@Autowired
-»ý¼ºÀÚCar	public Car(@Qualifier("id") Tire tire)
+ìƒì„±ìžCar	public Car(@Qualifier("id") Tire tire)
 ----------------------------------------------------------------------------------------------------------
-			di_collection	: xml¿¡¼­ list, map»ç¿ë
+			di_collection	: xmlì—ì„œ list, mapì‚¬ìš©
  ----------------------------------------------------------------------------------------------------------
 < Spring AOP >
 	
